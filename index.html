@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- AdSense Auto Verification Code (Don't Remove) -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1934336548646394"
      crossorigin="anonymous"></script>
     <meta charset="UTF-8">
@@ -44,9 +45,18 @@
 
     <!-- [SPACE ABOVE SEARCH BAR FOR ADS - REDUCED BY 25%] -->
     <div class="max-w-3xl mx-auto px-4 mt-4">
-        <div class="bg-slate-200 border border-slate-300 rounded-xl h-36 flex flex-col items-center justify-center text-center p-4 shadow-inner">
-            <span class="text-xs font-bold text-slate-400 tracking-widest uppercase mb-1">Advertisements</span>
-            <div class="text-slate-500 font-medium text-xs"><i class="fa-solid fa-rectangle-ad text-sm mr-2 text-slate-400"></i> Responsive Banner Ad Slot (Header Top)</div>
+        <div class="bg-slate-200 border border-slate-300 rounded-xl min-h-36 flex flex-col items-center justify-center text-center p-4 shadow-inner">
+            <span class="text-xs font-bold text-slate-400 tracking-widest uppercase mb-2">Advertisements</span>
+            <!-- AdSense Responsive Banner Ad Code -->
+            <ins class="adsbygoogle"
+                 style="display:block; width:100%;"
+                 data-ad-client="ca-pub-1934336548646394"
+                 data-ad-slot="auto"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
     </div>
 
@@ -70,9 +80,18 @@
 
     <!-- [SPACE BELOW SEARCH BAR FOR ADS - REDUCED BY 25%] -->
     <div class="max-w-3xl mx-auto px-4 mt-4">
-        <div class="bg-slate-200 border border-slate-300 rounded-xl h-48 flex flex-col items-center justify-center text-center p-4 shadow-inner">
-            <span class="text-xs font-bold text-slate-400 tracking-widest uppercase mb-1">Advertisements</span>
-            <div class="text-slate-500 font-medium text-xs"><i class="fa-solid fa-video text-sm mr-2 text-slate-400"></i> Responsive Display/Video Ad Slot (Header Bottom)</div>
+        <div class="bg-slate-200 border border-slate-300 rounded-xl min-h-48 flex flex-col items-center justify-center text-center p-4 shadow-inner">
+            <span class="text-xs font-bold text-slate-400 tracking-widest uppercase mb-2">Advertisements</span>
+            <!-- AdSense Responsive Display Ad Code -->
+            <ins class="adsbygoogle"
+                 style="display:block; width:100%;"
+                 data-ad-client="ca-pub-1934336548646394"
+                 data-ad-slot="auto"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
     </div>
 
@@ -105,132 +124,6 @@
             { t: "Next-Generation Visual Neural Networks", c: "Computer Vision", k: "Computer vision networks have transitioned heavily into continuous latent diffusion pipelines. These algorithmic frameworks process deep prompt matrices to render photorealistic imagery within hyper-dimensional digital architectures. Designers utilize prompt mechanics to engineer accurate graphic variations safely." },
             { t: "Automated Algorithmic Search Optimization", c: "SEO Technology", k: "Modern programmatic technical discovery depends heavily on mathematical indexing configurations used by major dynamic search crawlers. Algorithmic content scaling tools analyze multi-layered semantics, intent funnels, and contextual entities automatically. AdSense systems reward informative paragraphs that provide user-centric clarity." }
         ];
-
-        const articles = [];
-        for (let i = 1; i <= 32; i++) {
-            const topic = rawPool[(i - 1) % rawPool.length];
-            articles.push({
-                id: `art-${i}`,
-                title: `${topic.t} - Update Part ${i}`,
-                category: topic.c,
-                date: `July ${i}, 2026`,
-                content: `
-                    <p class="text-slate-700 leading-relaxed text-lg mb-4">${topic.k}</p>
-                    <h3 class="text-xl font-bold text-slate-900 mt-5 mb-3">Core Technical Breakdown & Analysis</h3>
-                    <p class="text-slate-700 leading-relaxed text-base mb-4">Furthermore, modern software architecture shifts demand decoupling backend frameworks from presentation states. Microservices execute API routines using lightweight communication pathways. This optimization scales up visual content systems seamlessly while keeping load latency low on mobile infrastructure globally.</p>
-                `
-            });
-        }
-
-        const ITEMS_PER_PAGE = 3; 
-        const urlParams = new URLSearchParams(window.location.search);
-        let currentPage = parseInt(urlParams.get('p')) || 1;
-        const mainContainer = document.getElementById('main-content');
-
-        function toggleSidebar() {
-            document.getElementById('sidebar').classList.toggle('-translate-x-full');
-            document.getElementById('sidebar-overlay').classList.toggle('hidden');
-        }
-
-        // Custom function to handle smooth scroll to link box target
-        window.scrollToLinkTarget = function() {
-            const target = document.getElementById('target-link-box');
-            if(target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-        }
-
-        function renderDashboard(dataList) {
-            let html = `<div class="space-y-12">`;
-            const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-            const endIndex = startIndex + ITEMS_PER_PAGE;
-            const paginatedItems = dataList.slice(startIndex, endIndex);
-
-            if (paginatedItems.length === 0) {
-                mainContainer.innerHTML = `<p class="text-center text-slate-400 py-12">No matching reports found.</p>`;
-                return;
-            }
-
-            paginatedItems.forEach((art, index) => {
-                const currentURL = encodeURIComponent(window.location.href.split('?')[0] + `?p=${currentPage}`);
-                const shareText = encodeURIComponent(`Read: ${art.title}`);
-                
-                html += `
-                    <article class="bg-white border border-slate-200 rounded-3xl p-6 md:p-10 shadow-sm">
-                        <div class="flex items-center space-x-2 text-xs font-bold text-indigo-600 uppercase mb-3">
-                            <span>${art.category}</span>
-                            <span>&bull;</span>
-                            <span class="text-slate-400">${art.date}</span>
-                        </div>
-                        <h2 class="text-2xl md:text-3xl font-black text-slate-900 mb-6 leading-tight">${art.title}</h2>
-                        
-                        <div class="prose max-w-none text-slate-700 mb-8 pb-6 border-b border-slate-100">
-                            ${art.content}
-                        </div>
-
-                        <!-- SOCIAL SHARE MODULE -->
-                        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 mb-8">
-                            <h4 class="text-xs font-black uppercase text-slate-400 mb-3 tracking-wider">Share This Article</h4>
-                            <div class="flex flex-wrap gap-2">
-                                <a href="https://api.whatsapp.com/send?text=${shareText}%20${currentURL}" target="_blank" class="flex items-center space-x-1.5 bg-[#25D366] text-white px-3 py-1.5 rounded-lg text-xs font-bold hover:opacity-90"><i class="fa-brands fa-whatsapp"></i> <span>WhatsApp</span></a>
-                                <a href="https://twitter.com/intent/tweet?text=${shareText}&url=${currentURL}" target="_blank" class="flex items-center space-x-1.5 bg-[#1DA1F2] text-white px-3 py-1.5 rounded-lg text-xs font-bold hover:opacity-90"><i class="fa-brands fa-twitter"></i> <span>Twitter</span></a>
-                                <a href="https://www.facebook.com/sharer/sharer.php?u=${currentURL}" target="_blank" class="flex items-center space-x-1.5 bg-[#1877F2] text-white px-3 py-1.5 rounded-lg text-xs font-bold hover:opacity-90"><i class="fa-brands fa-facebook-f"></i> <span>Facebook</span></a>
-                            </div>
-                        </div>
-                    </article>
-                `;
-
-                // --- SCROLL DOWN CLICK DETECTOR UNDER ARTICLE 1 ---
-                if (index === 0) {
-                    html += `
-                        <div class="my-6 text-center">
-                            <button onclick="window.scrollToLinkTarget()" class="inline-block bg-blue-600 text-white font-extrabold text-sm uppercase tracking-widest px-8 py-3 rounded-xl shadow-md border-b-4 border-blue-800 cursor-pointer active:scale-95 transition-transform">
-                                <i class="fa-solid fa-angles-down mr-2 animate-bounce"></i> Scroll Down
-                            </button>
-                        </div>
-                        <div class="h-6"></div>
-                    `;
-                }
-            });
-            html += `</div>`;
-
-            // --- RECONFIGURED LINK BOX: BLINKS SLOWER + GOLD TEXT + BLACK OUTLINE STROKE ---
-            html += `
-                <div id="target-link-box" class="mt-12 mb-6 text-center scroll-mt-24">
-                    <a href="?p=2" class="blink-btn inline-block bg-blue-600 font-black text-2xl tracking-widest px-16 py-4 rounded-2xl shadow-xl border-2 border-blue-500 hover:bg-blue-700 transition">
-                        <span class="gold-stroke">LINK</span> <i class="fa-solid fa-arrow-pointer ml-2 text-white text-xl"></i>
-                    </a>
-                </div>
-            `;
-
-            // --- PAGINATION MODULE ---
-            const totalPages = Math.ceil(dataList.length / ITEMS_PER_PAGE);
-            if (totalPages > 1) {
-                html += `<div class="flex flex-wrap justify-center items-center gap-2 mt-4 border-t border-slate-200 pt-6 pb-4">`;
-                if (currentPage > 1) {
-                    html += `<a href="?p=${currentPage - 1}" class="px-2.5 py-1.5 border rounded-lg bg-white text-xs font-medium text-slate-600">&larr; Prev</a>`;
-                }
-                for (let i = 1; i <= totalPages; i++) {
-                    const activeClass = i === currentPage ? 'bg-indigo-600 text-white border-indigo-600 font-bold' : 'bg-white text-slate-600 border-slate-200';
-                    html += `<a href="?p=${i}" class="w-8 h-8 flex items-center justify-center border rounded-lg text-xs font-medium transition ${activeClass}">${i}</a>`;
-                }
-                if (currentPage < totalPages) {
-                    html += `<a href="?p=${currentPage + 1}" class="px-2.5 py-1.5 border rounded-lg bg-white text-xs font-medium text-slate-600">Next &rarr;</a>`;
-                }
-                html += `</div>`;
-            }
-
-            mainContainer.innerHTML = html;
-        }
-
-        function handleSearch() {
-            const query = document.getElementById('search-input').value.toLowerCase();
-            const filtered = articles.filter(art => art.title.toLowerCase().includes(query) || art.content.toLowerCase().includes(query));
-            currentPage = 1;
-            renderDashboard(filtered);
-        }
-
-        renderDashboard(articles);
     </script>
 </body>
 </html>
